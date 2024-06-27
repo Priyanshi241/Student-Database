@@ -112,7 +112,7 @@ def update_student(student_id, first_name=None, last_name=None, date_of_birth=No
     cursor.execute(update_query, update_values)
     connection.commit()
 
-# Search students
+# Search data
 def search_students(column, value):
     query = f"SELECT * FROM Students WHERE {column} = %s"
     cursor.execute(query, (value,))
